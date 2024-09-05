@@ -8,6 +8,8 @@ using namespace std;
 int main()
 {
 
+    const int letters_bound = 51;
+
     srand(time(NULL));
 
     Password gen;
