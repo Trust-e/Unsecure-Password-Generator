@@ -6,48 +6,29 @@
 using namespace std;
 
 
-
-
-void Password::Password_Generator(Password gen)
+string Password::Password_Generator()
 {
+   Password gen;
    int random_index = 0;
+   string password = "";
 
    for(int i = 0; i <= 16; i++)
    {
         random_index = rand() % 71;
-
-        cout << gen.char_arr[random_index];
+        password += gen.char_arr[random_index];
    }
-   return;  
+   return password;  
 }
 
-void Password::set_test()
+
+string Password::get_password()
 {
-    Password gen;
-    int random_index = 0;
-    char arr[5] = {'0','1','2','3','4'};
-    set<char> set;
-
-    for(int i = 0; i < 17; i++)
-    {
-        random_index = rand() % 5;
-        set.insert(arr[random_index]);
-
-        if(set.find(arr[random_index]) != set.end()) // Meaning the item is in the set already
-        {
-            random_index = rand() % 5;
-        }
-
-        cout << arr[random_index];
-    }
-
-    cout << endl;
-
-
+    return password;
 }
 
-/*
-Would be a good idea to start writing methods for making sure the string 
-has no duplicate characters in it.
-*/
+void Password::set_password(string s)
+{
+    password = s;
+}
+
 

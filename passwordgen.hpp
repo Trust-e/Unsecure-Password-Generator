@@ -8,6 +8,11 @@ using namespace std;
 
 class Password
 {
+
+    private:
+
+    string password = "";
+
     public:
 
     char char_arr[70] = {
@@ -20,9 +25,13 @@ class Password
     '9','!', '@','#', '$', '%','^','&', '*' // Symbols: 62 - 69
     };
 
-    void Password_Generator(Password gen); // , int upper_bound, int lower_bound
+    string Password_Generator(); // , int upper_bound, int lower_bound
 
-    void set_test();
+    void Edit_Password();
+
+    string get_password();
+
+    void set_password(string s);
     
     
 };
