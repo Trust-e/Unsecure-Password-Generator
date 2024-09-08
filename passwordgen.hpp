@@ -27,8 +27,6 @@ class Password
 
     string Password_Generator(); // , int upper_bound, int lower_bound
 
-    void Edit_Password();
-
     string get_password();
 
     void set_password(string s);
